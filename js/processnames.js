@@ -11,9 +11,12 @@ function updateUI(obj)
 {
 	document.getElementById("title").innerHTML = obj.Title;
 	document.getElementById("summary").innerHTML = "'"+stringSlice(obj.Plot)+"'";
-	console.log(obj.Plot);
+	//console.log(obj.Plot);
 	document.getElementById("score").innerHTML = obj.imdbRating;
 	document.getElementById("stars").innerHTML = obj.Actors;
+	document.getElementById("director-main").innerHTML = obj.Director;
+	document.getElementById("writer").innerHTML = obj.Writer;
+	document.getElementById("mainactor").innerHTML = getMainActor(obj.Actors);
 
 
     // <div><p id="title"></p>
@@ -56,7 +59,10 @@ function getGenre(){
 	
 };
 
-function getMovieinfo(){};
+function getMainActor(obj){
+	mainActor = obj.substring(0, obj.indexOf(",")-1);
+	return mainActor;
+}
 
 function ranDomize(arrayLength){
 	var ranNum = Math.floor(Math.random() * (arrayLength-1)) + 1;

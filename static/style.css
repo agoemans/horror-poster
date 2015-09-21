@@ -1,3 +1,6 @@
+p{
+	margin: 0;
+}
 #ContentContainer{
 	width:400px;
 	height:500px;
@@ -5,21 +8,22 @@
 	top:100px;
 	left:50px;
 	background-color: khaki;
-	background: url(images/lady.jpg);
+/*	background: url(images/lady.jpg);*/
+	border:solid 10px whitesmoke;
 }
 
 .middle-box{
 	position: absolute;
 	width:100%;
 	float:left;
-	top: 150px; 
+	top: 250px; 
 }
 
 
 .box-left{
 	position: relative;
 	left:0;
-	width:120px;
+	width:220px;
 	float:left;
 
 }
@@ -69,7 +73,7 @@
     font-family: 'Merriweather', serif;
     font-size: 15px;
     font-style: normal;
-    color: whitesmoke;
+    color:black;
     margin-left: 10px;
 
 }
@@ -91,4 +95,37 @@
 	font-family: 'Strait', sans-serif;
 	font-weight: bold;
 	text-align: center;
+}
+
+#director-main, #director-predicate{
+	font-size: 15px;
+	font-family: 'PT Sans Narrow', sans-serif;
+	
+}
+
+#director-predicate{
+	font-size: 8px;
+}
+
+.directorInfo{
+    position: absolute;
+    left: 25%;
+    top: 20px;
+    width: 200px;
+}
+
+.directorInfo p{
+	text-align: center;
+}
+
+.actorInfo{
+	position: absolute;
+	left:20px;
+	top:100px;
+	width:100px;
+}
+
+#mainactor{
+	font-size: 25px;
+    font-family: 'Paytone One', sans-serif;
 }
