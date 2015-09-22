@@ -11,13 +11,19 @@
     <link href='https://fonts.googleapis.com/css?family=Strait' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
     
   </head>
   <body>
-  <div>
+  <div id="QuestionContainer">
     
-      <p>What movie should I watch?</p>
-      <button onclick="getSearchValue()">Get me a movie</button>
+      <h3 class="query" onclick="getSearchValue()">What movie should I watch?</h3>
+      <!-- <button onclick="getSearchValue()">Get me a movie</button> -->
     
   </div>
   <div id="ContentContainer" >
@@ -38,7 +44,12 @@
         <p id="summary"></p>
       </div>
       <div class="box-right">
-        <p id="score"></p>
+        <div id="box-right-top">
+          <p id="score"></p>  
+        </div>
+        <div id="box-right-bottom">
+          <p id="country"></p>
+        </div>
       </div>
       
     </div>

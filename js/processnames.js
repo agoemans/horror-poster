@@ -12,11 +12,12 @@ function updateUI(obj)
 	document.getElementById("title").innerHTML = obj.Title;
 	document.getElementById("summary").innerHTML = "'"+stringSlice(obj.Plot)+"'";
 	//console.log(obj.Plot);
-	document.getElementById("score").innerHTML = obj.imdbRating;
+	document.getElementById("score").innerHTML = "Rated "+obj.imdbRating+ " on IMDB!";
 	document.getElementById("stars").innerHTML = obj.Actors;
 	document.getElementById("director-main").innerHTML = obj.Director;
 	document.getElementById("writer").innerHTML = obj.Writer;
 	document.getElementById("mainactor").innerHTML = getMainActor(obj.Actors);
+	document.getElementById("country").innerHTML = "It's in " + obj.Language +"!";
 
 
     // <div><p id="title"></p>
@@ -53,7 +54,7 @@ function onJSONLoad (data){
 
 
 function getGenre(){
-	var movieID = ["tt0876294", "tt0023694", "tt2379308", "tt0448120","tt0369735", "tt0387412","tt1686821","tt0103893"];
+	var movieID = ["tt0876294", "tt0023694", "tt2379308", "tt0448120","tt0369735", "tt0387412","tt1686821","tt0103893", "tt1591095","tt1922777", "tt0107387","tt0084787"];
 
 	return movieID[ranDomize(movieID.length)];
 	

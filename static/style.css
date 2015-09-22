@@ -3,43 +3,59 @@ p{
 }
 #ContentContainer{
 	width:400px;
-	height:500px;
+	height:360px;
 	position: absolute;
 	top:100px;
-	left:50px;
-	background-color: khaki;
+	left:30%;
+	background-color: gold;
 /*	background: url(images/lady.jpg);*/
 	border:solid 10px whitesmoke;
 }
+
+#QuestionContainer{
+	width:400px;
+	height:200px;
+	position: absolute;
+	top:10px;
+	left:30%;
+	
+}
+
+#QuestionContainer h3{
+font-family: 'Francois One', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: darkorange;
+ }
 
 .middle-box{
 	position: absolute;
 	width:100%;
 	float:left;
-	top: 250px; 
+	top: 160px; 
 }
 
 
 .box-left{
 	position: relative;
 	left:0;
-	width:220px;
+	width:200px;
 	float:left;
 
 }
 
 .box-right{
-	position: relative;
-	right:0;
-	float:right;
-	height:45px;
-    width:45px;
-    background:yellow;
+    position: absolute;
+    right: 10px;
+    /* float: right; */
+    height: 45px;
+    /* width: 45px; */
+    /* background: yellow; */
     -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    border-radius: 25px;
-   /*margin-left:25%;*/
-   /*// margin-top:25%;*/
+    /* -webkit-border-radius: 20px; */
+    /* border-radius: 25px; */
+    /*background-color: crimson;*/
+    /* margin-left: 25%; */
 
 }
 
@@ -53,19 +69,32 @@ p{
     background-color: antiquewhite;
 }
 
+#box-right-top{
+	background-color: crimson;
+}
+
+#box-right-bottom{
+	position: absolute;
+	
+	margin-top: 5px;
+}
+
+#country{
+	    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    color: crimson;
+}
+
 #title{
-	margin-top:2px;
-	font-size: 30px;
-    font-family: 'Paytone One', sans-serif;
-    /* font-weight: bold; */
-    color: #f9f9f9;
-    background-color: plum;
-    width: 200px;
-    position: relative;
-    float: right;
-    padding-left: 15px;
+    /* margin-top: 2px; */
+    font-size: 25px;
+    font-family: Century Gothic”, CenturyGothic, AppleGothic, sans-serif;
+    font-weight: bold;
+    /* background-color: plum; */
+    /* width: 200px; */
     padding-bottom: 10px;
-    padding-right:5px;
+    padding-right: 5px;
+    text-transform: uppercase;
 }
 
 
@@ -83,7 +112,7 @@ p{
 	font-size: 15px;
 	font-family: AndaleMono, monospace;
 	font-weight: bold;
-	color: red;
+	color: antiquewhite;
 		position: relative;
 	right:0px;
 	margin-left: 10px;
@@ -99,19 +128,22 @@ p{
 
 #director-main, #director-predicate{
 	font-size: 15px;
-	font-family: 'PT Sans Narrow', sans-serif;
+	/*font-family: 'PT Sans Narrow', sans-serif;*/
 	
 }
 
 #director-predicate{
 	font-size: 8px;
+	
 }
 
 .directorInfo{
-    position: absolute;
-    left: 25%;
+ /*   position: absolute;*/
+ 	margin-top: 10px;
+    left: 20%;
     top: 20px;
-    width: 200px;
+    /*width: 200px;*/
+    
 }
 
 .directorInfo p{
@@ -123,9 +155,28 @@ p{
 	left:20px;
 	top:100px;
 	width:100px;
+	color: #f9f9f9;
 }
 
-#mainactor{
-	font-size: 25px;
-    font-family: 'Paytone One', sans-serif;
+#mainactor, #mainactor-conjuction{
+	font-size: 20px;
+    font-family: Century Gothic”, CenturyGothic, AppleGothic, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    
 }
+
+#mainactor{ 
+	font-weight: 700;
+	font-size: 20px;
+}
+
+#mainactor-conjuction{ 
+	font-weight: normal;
+	font-size: 10px;
+
+}
+
+#title, #summary, #director-main, #director-predicate, #mainactor, #mainactor-conjuction {
+	color: crimson;
+} 
