@@ -17,7 +17,8 @@ function updateUI(obj)
 	document.getElementById("director-main").innerHTML = obj.Director;
 	document.getElementById("writer").innerHTML = obj.Writer;
 	document.getElementById("mainactor").innerHTML = getMainActor(obj.Actors);
-	document.getElementById("country").innerHTML = "It's in " + obj.Language +"!";
+	document.getElementById("rating").innerHTML = obj.Rated;
+	document.getElementById("released").innerHTML = obj.Released;
 
 
     // <div><p id="title"></p>
@@ -61,7 +62,7 @@ function getGenre(){
 };
 
 function getMainActor(obj){
-	mainActor = obj.substring(0, obj.indexOf(",")-1);
+	mainActor = obj.substring(0, obj.indexOf(","));
 	return mainActor;
 }
 
