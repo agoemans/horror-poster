@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="store">
+<html lang="en" ng-app="posterApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,50 +21,51 @@
     <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200' rel='stylesheet' type='text/css'>
     
   </head>
-  <body>
-  <div id="QuestionContainer">
+  <body >
+  <div ng-controller="TitleController as ask" id="QuestionContainer">
     
-      <h3 class="query" onclick="getSearchValue()">What movie should I watch?</h3>
+      <h3 class="query" ng-click="ask.getMovie()">What movie should I watch?</h3>
       <!-- <button onclick="getSearchValue()">Get me a movie</button> -->
     
-  </div>
-  <div id="ContentContainer" >
-    <div class="directorInfo">
-      <p id="director-main"></p>
-      <p id="director-predicate">PRESENTS</p>
-      <p id="mainactor"> </p>
-      <p id="mainactor-conjuction">as</p>
-        <p id="title"></p>
-    </div>
-    
-<!--     <div class="title-inner">
-      <p id="title"></p>
-    </div> -->
-    <div class="middle-box">
-      <div class="box-left">
-        <p id="summary"></p>
-      </div>
-      <div class="box-right">
-        <div id="box-right-top">
-          <p id="score"></p>  
-        </div>
-        <div id="box-right-bottom">
-          <p id="rating"></p>
-        </div>
+  
+    <div  id="ContentContainer" >
+      <div ng-controller="MainTitle as title" class="directorInfo">
+        <p id="director-main"></p>
+        <p id="director-predicate">PRESENTS</p>
+        <p id="mainactor"> </p>
+        <p id="mainactor-conjuction">as</p>
+          <p id="title"></p>
       </div>
       
-    </div>
+
+      <div ng-controller="MidText as middle" class="middle-box">
+        <div class="box-left">
+          <p id="summary"></p>
+        </div>
+        <div class="box-right">
+          <div id="box-right-top">
+            <p id="score"></p>  
+          </div>
+          <div id="box-right-bottom">
+            <p id="rating"></p>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div ng-controller="CreditsText as cred" class="bottom-box">
+        <p id="stars-font">Co-starring</p><p id="stars"></p>  
+        <p id="writer-font">Written by</p><p id="writer"></p>  
+        <p id="released-font">Release date</p><p id="released"></p>  
+      </div>
+
+    </div>    
+  </div>
+
+    <!--Libraries-->
+    <script src="bower_components/angular/angular.min.js"></script>
     
-    <div class="bottom-box">
-      <p id="stars-font">Co-starring</p><p id="stars"></p>  
-      <p id="writer-font">Written by</p><p id="writer"></p>  
-      <p id="released-font">Release date</p><p id="released"></p>  
-    </div>
-
-  </div>    
-
-
-
+    <!--My own JS files-->
     <script type="text/javascript" src="js/helper.js"></script>
     <script type="text/javascript" src="js/processnames.js"></script>
 
