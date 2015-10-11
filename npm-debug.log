@@ -1,0 +1,22 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose node symlink /usr/bin/node
+5 verbose config Skipping project config: /home/kwallen/.npmrc. (matches userconfig)
+6 verbose readDependencies loading dependencies from /home/kwallen/package.json
+7 error install Couldn't read dependencies
+8 verbose stack Error: ENOENT, open '/home/kwallen/package.json'
+8 verbose stack     at Error (native)
+9 verbose cwd /home/kwallen/Projects/Javascript/HorrorList
+10 error Linux 3.16.0-50-generic
+11 error argv "/usr/bin/node" "/usr/bin/npm" "install"
+12 error node v0.12.7
+13 error npm  v2.11.3
+14 error path /home/kwallen/package.json
+15 error code ENOPACKAGEJSON
+16 error errno -2
+17 error package.json ENOENT, open '/home/kwallen/package.json'
+17 error package.json This is most likely not a problem with npm itself.
+17 error package.json npm can't find a package.json file in your current directory.
+18 verbose exit [ -2, true ]

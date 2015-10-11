@@ -57,7 +57,7 @@ function onJSONLoad (data){
 function getGenre(){
 	var movieID = ["tt0876294", "tt0023694", "tt2379308", "tt0448120","tt0369735", "tt0387412","tt1686821","tt0103893", "tt1591095","tt1922777", "tt0107387","tt0084787"];
 
-	return movieID[ranDomize(movieID.length)];
+	return ranDomize(movieID);
 	
 };
 
@@ -66,9 +66,9 @@ function getMainActor(obj){
 	return mainActor;
 }
 
-function ranDomize(arrayLength){
-	var ranNum = Math.floor(Math.random() * (arrayLength-1)) + 1;
-	return ranNum;
+function ranDomize(array){
+	var ranNum = Math.floor(Math.random() * (array.length-1)) ;
+	return array[ranNum];
 };
 
 function genreObject(){

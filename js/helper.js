@@ -12,5 +12,10 @@ var helper = (function(){
 		ajaxhttp.send();
 	};
 
+	module.getRandomElement = function(array){
+		var ranNum = Math.floor(Math.random() * (array.length-1)) ;
+		return array[ranNum];
+	};
+
 	return module;
 }());

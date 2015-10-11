@@ -22,41 +22,39 @@
     
   </head>
   <body >
-  <div ng-controller="TitleController as ask" id="QuestionContainer">
+  <div ng-controller="TitleController as TitleCntrl" id="QuestionContainer" >
     
-      <h3 class="query" ng-click="ask.getMovie()">What movie should I watch?</h3>
-      <!-- <button onclick="getSearchValue()">Get me a movie</button> -->
-    
+      <h3 class="query" ng-click="TitleCntrl.getMovie()">What movie should I watch?</h3> 
   
-    <div  id="ContentContainer" >
-      <div ng-controller="MainTitle as title" class="directorInfo">
-        <p id="director-main"></p>
-        <p id="director-predicate">PRESENTS</p>
-        <p id="mainactor"> </p>
+    <div  id="ContentContainer" ng-model="TitleCntrl" ng-show="show" >
+      <div class="directorInfo">
+        <p id="director-main">{{TitleCntrl.movie.Director}}</p>
+        <p id="director-predicate" >PRESENTS</p>
+        <p id="mainactor">{{TitleCntrl.getMainActor(TitleCntrl.movie.Actors)}} </p>
         <p id="mainactor-conjuction">as</p>
-          <p id="title"></p>
+          <p id="title">{{TitleCntrl.movie.Title}}</p>
       </div>
       
 
-      <div ng-controller="MidText as middle" class="middle-box">
+      <div class="middle-box">
         <div class="box-left">
-          <p id="summary"></p>
+          <p id="summary">{{TitleCntrl.summary(TitleCntrl.movie.Plot)}} </p>
         </div>
         <div class="box-right">
           <div id="box-right-top">
-            <p id="score"></p>  
+            <p id="score">{{TitleCntrl.imdbRating(TitleCntrl.movie.imdbRating)}} </p>  
           </div>
           <div id="box-right-bottom">
-            <p id="rating"></p>
+            <p id="rating">{{TitleCntrl.movie.Rated}}</p>
           </div>
         </div>
         
       </div>
       
-      <div ng-controller="CreditsText as cred" class="bottom-box">
-        <p id="stars-font">Co-starring</p><p id="stars"></p>  
-        <p id="writer-font">Written by</p><p id="writer"></p>  
-        <p id="released-font">Release date</p><p id="released"></p>  
+      <div class="bottom-box">
+        <p id="stars-font">Co-starring</p><p id="stars">{{TitleCntrl.movie.Actors}}</p>  
+        <p id="writer-font">Written by</p><p id="writer">{{TitleCntrl.movie.Writer}}</p>  
+        <p id="released-font">Release date</p><p id="released">{{TitleCntrl.movie.Released}}</p>  
       </div>
 
     </div>    
@@ -67,7 +65,9 @@
     
     <!--My own JS files-->
     <script type="text/javascript" src="js/helper.js"></script>
-    <script type="text/javascript" src="js/processnames.js"></script>
+    <script type="text/javascript" src="js/movie_helper.js"></script>
+    <script type="text/javascript" src="js/title_controller.js"></script>
+    <!--script type="text/javascript" src="js/_processnames.js"></script-->
 
   </body>
 </html>
