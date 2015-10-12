@@ -10,6 +10,7 @@ p{
 	background-color: gold;
 /*	background: url(images/lady.jpg);*/
 	border:solid 10px whitesmoke;
+	
 }
 
 #QuestionContainer{
@@ -22,9 +23,10 @@ p{
 }
 
 #QuestionContainer h3{
-font-family: 'Francois One', sans-serif;
-    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+    font-size: 30px;
     text-align: center;
+    width: 500px;
     color: darkorange;
  }
 
@@ -36,6 +38,13 @@ font-family: 'Francois One', sans-serif;
     left: 50px;
 }
 
+
+.image-box{
+	background-image: url(images/PsychoPoster.png);
+    width: 300px;
+    height: 600px;
+    float: left;
+}
 
 .box-left{
 	position: relative;
@@ -91,7 +100,7 @@ font-family: 'Francois One', sans-serif;
 #title{
     /* margin-top: 2px; */
     font-size: 40px;
-    font-family: 'Exo 2', CenturyGothic, AppleGothic, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans serif';
     font-weight: bold;
     /* background-color: plum; */
     /* width: 200px; */
@@ -103,26 +112,28 @@ font-family: 'Francois One', sans-serif;
 
 
 #summary{
-	font-family: 'Merriweather', serif;
-    font-size: 15px;
+    font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+    font-size: 30px;
     font-style: italic;
     color: black;
     margin-left: 10px;
-    line-height: 30px;
+    /* line-height: 30px; */
 
 }
 
 
 #score{
-	font-size: 15px;
-	font-family: AndaleMono, monospace;
-	font-weight: bold;
-	color: antiquewhite;
-		position: relative;
-	right:0px;
-	margin-left: 10px;
+    font-size: 20px;
+    font-family: AndaleMono, monospace;
+    font-weight: bold;
+    color: #f9f9f9;
+    width: 80px;
+    line-height: 30px;
+    position: relative;
+    right: 0px;
+    margin-left: 10px;
     margin-top: 15px;
-    padding:20px;
+    padding: 20px;
 }
 
 #stars, #writer, #released{
@@ -135,14 +146,15 @@ font-family: 'Francois One', sans-serif;
 }
 
 #director-main, #director-predicate{
-	font-size: 15px;
-	/*font-family: 'PT Sans Narrow', sans-serif;*/
+	font-size: 20px;
+    font-family: 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
 	
 }
 
 #director-predicate{
-	font-size: 8px;
-	
+	font-size: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .directorInfo{
@@ -169,7 +181,7 @@ font-family: 'Francois One', sans-serif;
 
 #mainactor, #mainactor-conjuction{
 	font-size: 20px;
-    font-family: CenturyGothic, AppleGothic, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans serif';
     font-weight: 700;
     text-transform: uppercase;
     
@@ -177,14 +189,14 @@ font-family: 'Francois One', sans-serif;
 
 #mainactor{ 
 	font-weight: 700;
-	font-size: 35px;
+	font-size: 25px;
     padding-bottom: 5px;
 
 }
 
 #mainactor-conjuction{ 
 	font-weight: normal;
-	font-size: 10px;
+	font-size: 14px;
 
 }
 
@@ -203,7 +215,7 @@ font-size: 20px;
 }
 
 #rating{
-    font-family: fantasy;
+    font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
     font-size: 40px;
     font-weight: 900;
     color: red;

@@ -8,7 +8,7 @@
 		this.getMovie = function(){			
 			var movieID = movieHelper.getGenre();
 			this.processSearch(movieID);	
-			$scope.show=true;
+			
 		};
 
 		this.processSearch = function (searchTerm){
@@ -27,7 +27,9 @@
 		this.onJSONLoad = function(data){
 			var obj = JSON.parse(data);			
 			this.movie = obj;
-		    $scope.$apply();	
+			$scope.show=true;
+		    $scope.$apply();
+
 		};
 
 		this.getMainActor = function(actors){
