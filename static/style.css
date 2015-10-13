@@ -28,6 +28,8 @@ p{
     text-align: center;
     width: 500px;
     color: darkorange;
+    margin-left: 65%;
+
  }
 
 .middle-box{
@@ -126,23 +128,24 @@ p{
     font-size: 20px;
     font-family: AndaleMono, monospace;
     font-weight: bold;
-    color: #f9f9f9;
-    width: 80px;
+    color: crimson;
+    width: 100px;
     line-height: 30px;
     position: relative;
-    right: 0px;
-    margin-left: 10px;
-    margin-top: 15px;
-    padding: 20px;
+    right: 20px;
+    margin-left: 20px;
+    margin-top: 5px;
+    /* padding: 20px; */
 }
 
 #stars, #writer, #released{
     font-size: 20px;
-    font-family: 'Strait', sans-serif;
-    font-weight: 700;
+    font-family: Rockwell, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
+    /* font-weight: 700; */
     text-align: center;
     line-height: 20px;
     color: firebrick;
+    text-transform: capitalize;
 }
 
 #director-main, #director-predicate{
@@ -205,20 +208,22 @@ p{
 } 
 
 #stars-font, #writer-font, #released-font{
-font-size: 20px;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    font-family: Rockwell, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
     /* font-weight: 700; */
     text-align: center;
     line-height: 20px;
-    color: indianred;
+    color: firebrick;
     line-height: 40px;
+    text-transform: uppercase;
 }
 
 #rating{
     font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 900;
-    color: red;
+    color: #f9f9f9;
     position: relative;
-    left: 30px;
+    /* left: 30px; */
+    padding: 10px;
 }

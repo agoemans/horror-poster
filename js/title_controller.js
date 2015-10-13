@@ -4,6 +4,7 @@
 
 	posterApp.controller('TitleController', function($scope){
 		this.movie = {};
+		
 
 		this.getMovie = function(){			
 			var movieID = movieHelper.getGenre();
@@ -18,11 +19,6 @@
 
 		};
 
-		this.onJSONLoad = function(data){
-			var obj = JSON.parse(data);			
-			this.movie = obj;
-		    $scope.$apply();	
-		};
 
 		this.onJSONLoad = function(data){
 			var obj = JSON.parse(data);			
