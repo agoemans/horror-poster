@@ -2,12 +2,18 @@ var movieHelper = (function(){
 	var module = {};
 
 	module.getSubplot = function(str){
-		var startPos = str.indexOf(",");
-		var secondStrStart = str.substring(startPos+1, str.length);
-		var nextPos = secondStrStart.indexOf(",");
-		var thirdStrStart = secondStrStart.substring(nextPos+1, secondStrStart.length)
-		var myString = str.substring(startPos+1,secondStrStart);
-		return thirdStrStart;
+		if (str.length!=0){
+			var startPos = str.indexOf(",");
+			var secondStrStart = str.substring(startPos+1, str.length);
+			var nextPos = secondStrStart.indexOf(",");
+			var thirdStrStart = secondStrStart.substring(nextPos+1, secondStrStart.length)
+			var myString = str.substring(startPos+1,secondStrStart);
+			return thirdStrStart
+		}
+
+		else{
+			return "This sadly has no plot worth noting."
+		}
 	};
 
 	module.getGenre = function(){

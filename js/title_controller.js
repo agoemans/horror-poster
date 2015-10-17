@@ -3,12 +3,11 @@
 	var posterApp = angular.module('posterApp', []);
 
 	posterApp.controller('TitleController', function($scope){
-		this.movie = {};
+		this.movie = null;
 
 
 		this.getMovie = function(){			
 			var movieID = movieHelper.getGenre();
-			console.log(movieID)
 			this.processSearch(movieID);	
 			
 		};
@@ -26,20 +25,31 @@
 			this.movie = obj;
 			$scope.show=true;
 		    $scope.$apply();
-
 		};
 
-		this.getMainActor = function(actors){
-			mainActor = actors.substring(0, actors.indexOf(","));
+		this.isInitialized = function(){
+			return !!this.movie;
+		}
+
+		this.getMainActor = function(){
+			if(!this.isInitialized())
+				return "";
+
+			mainActor = this.movie.Actors.substring(0, this.movie.Actors.indexOf(","));
 			return mainActor;
 		};
 
-		this.summary = function(plot){
-			return movieHelper.getSubplot(plot);
+		this.summary = function(){
+			if(!this.isInitialized())
+				return "";
+
+			return movieHelper.getSubplot(this.movie.Plot);
 		};
 
-		this.imdbRating = function(rating){
-			return movieHelper.getScore(rating);
+		this.imdbRating = function(){
+			if(!this.isInitialized())
+				return "";
+			return movieHelper.getScore(this.movie.imdbRating);
 		}	
 
 		this.changeImage = function(){
@@ -48,6 +58,8 @@
 			image = helper.getRandomElement(imageList);
 			return  image
 		}
+
+		this.getMovie();
 });
 
 

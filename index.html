@@ -30,7 +30,7 @@
       <div class="directorInfo">
         <p id="director-main">{{TitleCntrl.movie.Director}}</p>
         <p id="director-predicate" >PRESENTS</p>
-        <p id="mainactor">{{TitleCntrl.getMainActor(TitleCntrl.movie.Actors)}} </p>
+        <p id="mainactor">{{TitleCntrl.getMainActor()}} </p>
         <p id="mainactor-conjuction">IN</p>
           <p id="title">{{TitleCntrl.movie.Title}}</p>
       </div>
@@ -38,7 +38,7 @@
 
       <div class="middle-box">
         <div class="box-left">
-          <p id="summary">{{TitleCntrl.summary(TitleCntrl.movie.Plot)}} </p>
+          <p id="summary">{{TitleCntrl.summary()}} </p>
         </div>
         <!-- <div class="image-box" ng-style="{'background-image': 'url(static/images/' + TitleCntrl.changeImage() + ')'}"> -->
         <div class="image-box" >
@@ -50,7 +50,7 @@
             <p id="rating">{{TitleCntrl.movie.Rated}}</p>
           </div>
           <div id="box-right-bottom">
-            <p id="score">{{TitleCntrl.imdbRating(TitleCntrl.movie.imdbRating)}} </p>  
+            <p id="score">{{TitleCntrl.imdbRating()}} </p>  
           </div>
         </div>
         
