@@ -4,10 +4,11 @@
 
 	posterApp.controller('TitleController', function($scope){
 		this.movie = {};
-		
+
 
 		this.getMovie = function(){			
 			var movieID = movieHelper.getGenre();
+			console.log(movieID)
 			this.processSearch(movieID);	
 			
 		};
@@ -40,6 +41,13 @@
 		this.imdbRating = function(rating){
 			return movieHelper.getScore(rating);
 		}	
+
+		this.changeImage = function(){
+			var imageList =['mask.png', 'cat.png', 'creep.png'];
+			var image;
+			image = helper.getRandomElement(imageList);
+			return  image
+		}
 });
 
 

@@ -1,15 +1,19 @@
+body{
+	background-color: #333;
+}
+
 p{
 	margin: 0;
 }
+
 #ContentContainer{
 	width: 750px;
     height: 860px;
 	position: absolute;
 	top:100px;
 	left:30%;
-	background-color: gold;
-/*	background: url(images/lady.jpg);*/
-	border:solid 10px whitesmoke;
+	background-color: #FFE247;
+	border: solid 10px #5D6679;
 	
 }
 
@@ -27,7 +31,7 @@ p{
     font-size: 30px;
     text-align: center;
     width: 500px;
-    color: darkorange;
+    color: #FFDDB4;
     margin-left: 65%;
 
  }
@@ -36,16 +40,17 @@ p{
 	position: absolute;
     width: 90%;
     float: left;
-    top: 220px;
-    left: 50px;
+    top: 230px;
+    left: 30px;
 }
 
 
 .image-box{
-	background-image: url(images/PsychoPoster.png);
+	background-image: url(images/mask.png);
     width: 300px;
-    height: 600px;
+    height: 369px;
     float: left;
+    margin-left: 20px;
 }
 
 .box-left{
@@ -58,7 +63,7 @@ p{
 
 .box-right{
     position: absolute;
-    right: 10px;
+    right: -20px;
     /* float: right; */
     height: 45px;
     /* width: 45px; */
@@ -115,7 +120,7 @@ p{
 
 #summary{
     font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
-    font-size: 30px;
+    font-size: 25px;
     font-style: italic;
     color: black;
     margin-left: 10px;

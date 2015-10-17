@@ -11,7 +11,7 @@ var movieHelper = (function(){
 	};
 
 	module.getGenre = function(){
-		var movieID = ["tt0876294", "tt0023694", "tt2379308", "tt0448120","tt0369735", "tt0387412","tt1686821","tt0103893", "tt1591095","tt1922777", "tt0107387","tt0084787"];
+		var movieID = ["tt1457767", "tt0876294", "tt0082010", "tt0448120","tt2554274", "tt1686821","tt0103893", "tt1591095", "tt0107387","tt0084787", "tt0295700", "tt0263488", "tt0089175", "tt0087800"];
 		return helper.getRandomElement(movieID);
 	};
 

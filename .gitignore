@@ -1,3 +1,6 @@
 #image folder
 static/images/
 
+#test js files
+processnames.js
+
