@@ -4,6 +4,7 @@
 
 	posterApp.controller('TitleController', function($scope){
 		this.movie = null;
+		this.show = false;
 
 
 		this.getMovie = function(){			
@@ -23,8 +24,9 @@
 		this.onJSONLoad = function(data){
 			var obj = JSON.parse(data);			
 			this.movie = obj;
-			$scope.show=true;
-		    $scope.$apply();
+			this.show = true;
+			$scope.$apply();
+
 		};
 
 		this.isInitialized = function(){

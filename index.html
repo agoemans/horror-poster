@@ -7,18 +7,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Horror Movies</title>   
     <link type="text/css" rel="stylesheet" href="static/style.css" >
-    <link href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Strait' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Exo+2:400,900' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200' rel='stylesheet' type='text/css'>
     
   </head>
   <body >
@@ -26,7 +14,7 @@
     
       <h3 class="query" ng-click="TitleCntrl.getMovie()">What movie should I watch?</h3> 
   
-    <div  id="ContentContainer" ng-model="TitleCntrl" ng-show="show" >
+    <div  id="ContentContainer" ng-model="TitleCntrl" ng-show="TitleCntrl.show" >
       <div class="directorInfo">
         <p id="director-main">{{TitleCntrl.movie.Director}}</p>
         <p id="director-predicate" >PRESENTS</p>
@@ -40,7 +28,7 @@
         <div class="box-left">
           <p id="summary">{{TitleCntrl.summary()}} </p>
         </div>
-        <!-- <div class="image-box" ng-style="{'background-image': 'url(static/images/' + TitleCntrl.changeImage() + ')'}"> -->
+        
         <div class="image-box" >
 
           
