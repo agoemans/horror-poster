@@ -1,6 +1,12 @@
-#image folder
+#image folder#
 static/images/
 
-#test js files
+#test js files#
 processnames.js
 
+
+#bower#
+bower_components
+
+#logs#
+npm-debug.log
