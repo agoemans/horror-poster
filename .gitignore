@@ -2,11 +2,11 @@
 static/images/
 
 #test js files#
-processnames.js
+/processnames.js
 
 
 #bower#
-bower_components/
+/bower_components/
 
 #logs#
 /npm-debug.log
