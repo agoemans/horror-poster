@@ -6,7 +6,7 @@ processnames.js
 
 
 #bower#
-bower_components
+bower_components/
 
 #logs#
-npm-debug.log
+/npm-debug.log
