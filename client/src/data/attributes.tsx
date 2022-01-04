@@ -14,5 +14,19 @@ export const attrib: iAttribute[] = [
         siteUrl: 'www.freepik.com',
         siteName: 'Freepik',
         imageName: 'night'
+    },
+    {
+        authorUrl: 'https://www.rawpixel.com',
+        author: 'rawpixel',
+        siteUrl: 'www.freepik.com',
+        siteName: 'Freepik',
+        imageName: 'abstract'
+    },
+    {
+        authorUrl: 'https://www.freepik.com',
+        author: 'jcomp',
+        siteUrl: 'www.freepik.com',
+        siteName: 'Freepik',
+        imageName: 'vintage'
     }
 ]
