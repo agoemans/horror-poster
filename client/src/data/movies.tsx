@@ -5,7 +5,10 @@ export const movies: iPoster[] = [
         description: 'The ultimate in alien terror', title: 'The Thing',
         actors: ['Kurt Russel', 'Wilford Brimley', 'T.K. Carter', 'David Clennon',
             'Keith David', 'Richard Dysart'],
-        directorCredit: 'John Carpenter\'s'
+        directorCredit: 'John Carpenter\'s',
+        directedBy: 'John Carpenter',
+        producedBy: 'Lawrence Turman',
+        extraDescription: ['Man is The Warmest Place to Hide.', 'Anytime. Anywhere. Anyone.']
     },
     {
         description: 'Don\'t get him wet, keep him out of bright light, and never feed him after midnight.', title: 'Gremlins',
@@ -14,6 +17,7 @@ export const movies: iPoster[] = [
             'Frances Lee McCain', 'Judge Reinhold', 'Dick Miller'],
         directorCredit: 'Steven Spielberg presents',
         directedBy: 'Joe Dante',
-        producedBy: 'Michael Finnell'
+        producedBy: 'Michael Finnell',
+        extraDescription: ['What you see... isn\'t always what you get.', 'They didn\'t obey the rules!']
     }
 ]

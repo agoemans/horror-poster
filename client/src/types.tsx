@@ -5,6 +5,7 @@ export interface iPoster {
     actors: string[];
     directedBy?: string;
     producedBy?: string;
+    extraDescription: string[];
 }
 
 export interface iAttribute {

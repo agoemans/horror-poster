@@ -52,7 +52,11 @@ module.exports = {
     devServer: {
         host: 'localhost',
         port: 8080,
-        historyApiFallback: true
+        hot: true,
+        static: {
+            directory: path.join(__dirname, '_build'),
+            watch: true
+        }
     },
     plugins: [
         new HtmlWebpackPlugin(
