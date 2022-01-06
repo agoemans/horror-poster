@@ -17,17 +17,10 @@ const Wrapper = styled.div`
 
 export const App = () => {
     return(
-        <Router>
-            <Wrapper className='app'>
-                <div className='app-content'>
-                    <Switch>
-                        <Route path='/'>
-                            <Poster/>
-                        </Route>
-                    </Switch>
-
-                </div>
-            </Wrapper>
-        </Router>
+        <Wrapper className='app'>
+            <div className='app-content'>
+                <Poster/>
+            </div>
+        </Wrapper>
     )
 }

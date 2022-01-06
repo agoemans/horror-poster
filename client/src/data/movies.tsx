@@ -11,7 +11,9 @@ export const movies: iPoster[] = [
         description: 'Don\'t get him wet, keep him out of bright light, and never feed him after midnight.', title: 'Gremlins',
         actors: ['Zach Galligan','Phoebe Cates', 'Hoyt Axton',
             'Polly Holliday',
-            'Frances Lee McCain'],
-        directorCredit: 'Steven Spielberg presents'
+            'Frances Lee McCain', 'Judge Reinhold', 'Dick Miller'],
+        directorCredit: 'Steven Spielberg presents',
+        directedBy: 'Joe Dante',
+        producedBy: 'Michael Finnell'
     }
 ]

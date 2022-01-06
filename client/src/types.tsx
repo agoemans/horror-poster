@@ -3,6 +3,8 @@ export interface iPoster {
     description: string;
     directorCredit: string;
     actors: string[];
+    directedBy?: string;
+    producedBy?: string;
 }
 
 export interface iAttribute {

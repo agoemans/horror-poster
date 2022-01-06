@@ -12,18 +12,16 @@ const Footer = styled.footer`
 `;
 
 const Para = styled.p`
-    background-color: #f3f3f3;
-    padding: .5em calc(1.5em + .5vw);
-    color: #607744;        
+    padding: 5px;
+    color: #edede9;        
     font-size: 16px;   
     text-align: center;
     font-family: 'Itim',serif;
-    border-radius: 11px;
-    width: 250px;
+    margin: 0;
 `;
 
 const Link = styled.a`
-    color: #ccaa22;
+    color: #edede9;
     text-decoration: none;
 `;
 
