@@ -6,7 +6,7 @@ export const fontColors = {
 }
 
 export const fontStyles: iFontStyles = {
-    title: ['Bowlby One SC', 'Titan One'],
+    title: ['Bowlby One SC'],
     actors: ['Big Shoulders Display'],
     description: ['Bowlby One SC', 'Squada One'],
     directorCredit: ['Bowlby One SC', 'Audiowide']

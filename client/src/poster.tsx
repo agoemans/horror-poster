@@ -8,6 +8,7 @@ import ImageCenteredLayout from "./layout-types/image-centered-layout";
 import ClippedImage from "./layout-types/clipped-image";
 import BottomAligned from "./layout-types/bottom-aligned";
 import {getRandomNumber} from "./helpers/get-random-number";
+import MinimalistLeftAligned from "./layout-types/minimalist-left-aligned";
 
 const Wrapper = styled.div`
     display: flex;
@@ -21,7 +22,7 @@ export default function Poster() {
     const {title, actors, directorCredit, description, directedBy, producedBy, extraDescription} = getMovie();
 
     const getRandomPosterType = (title: string, description: string, directorCredit: string, actors: string[], extraDescription: string[], directedBy?: string, producedBy?: string) => {
-      const random = getRandomNumber(1,4);
+      const random = getRandomNumber(1,5);
       switch (random) {
           case 1:
               return <SideBarLayout title={title} description={description} directorCredit={directorCredit} actors={actors} directedBy={directedBy} producedBy={producedBy} extraDescription={extraDescription}/>
@@ -36,8 +37,8 @@ export default function Poster() {
     }
     return (
         <Wrapper>
-           {getRandomPosterType(title, description, directorCredit, actors, extraDescription, directedBy, producedBy)}
-           {/* <SideBarLayout title={title} description={description} directorCredit={directorCredit} actors={actors} directedBy={directedBy} producedBy={producedBy} extraDescription={extraDescription}/>*/}
+           {/*{getRandomPosterType(title, description, directorCredit, actors, extraDescription, directedBy, producedBy)}*/}
+            <MinimalistLeftAligned title={title} description={description} directorCredit={directorCredit} actors={actors} directedBy={directedBy} producedBy={producedBy} extraDescription={extraDescription}/>
         </Wrapper>
     );
 }
