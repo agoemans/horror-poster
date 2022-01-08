@@ -7,6 +7,7 @@ import SideBarLayout from "./layout-types/side-bar-layout";
 import ImageCenteredLayout from "./layout-types/image-centered-layout";
 import ClippedImage from "./layout-types/clipped-image";
 import BottomAligned from "./layout-types/bottom-aligned";
+import {getRandomNumber} from "./helpers/get-random-number";
 
 const Wrapper = styled.div`
     display: flex;
@@ -18,13 +19,25 @@ const Wrapper = styled.div`
 
 export default function Poster() {
     const {title, actors, directorCredit, description, directedBy, producedBy, extraDescription} = getMovie();
+
+    const getRandomPosterType = (title: string, description: string, directorCredit: string, actors: string[], extraDescription: string[], directedBy?: string, producedBy?: string) => {
+      const random = getRandomNumber(1,4);
+      switch (random) {
+          case 1:
+              return <SideBarLayout title={title} description={description} directorCredit={directorCredit} actors={actors} directedBy={directedBy} producedBy={producedBy} extraDescription={extraDescription}/>
+          case 2:
+              return <ImageCenteredLayout title={title} description={description} directorCredit={directorCredit} actors={actors} directedBy={directedBy} producedBy={producedBy} extraDescription={extraDescription}/>
+          case 3:
+              return <ClippedImage title={title} description={description} directorCredit={directorCredit} actors={actors} directedBy={directedBy} producedBy={producedBy} extraDescription={extraDescription}/>
+          case 4:
+          default:
+              return <BottomAligned title={title} description={description} directorCredit={directorCredit} actors={actors} directedBy={directedBy} producedBy={producedBy} extraDescription={extraDescription}/>
+      }
+    }
     return (
         <Wrapper>
-           {/*<ImageHeavy title={title} description={description} directorCredit={directorCredit} actors={actors}/>*/}
-           {/* <SideBarLayout title={title} description={description} directorCredit={directorCredit} actors={actors}/>*/}
-           {/* <ImageCenteredLayout title={title} description={description} directorCredit={directorCredit} actors={actors}/>*/}
-           {/* <ClippedImage title={title} description={description} directorCredit={directorCredit} actors={actors} directedBy={directedBy} producedBy={producedBy} extraDescription={extraDescription}/>*/}
-            <BottomAligned title={title} description={description} directorCredit={directorCredit} actors={actors} directedBy={directedBy} producedBy={producedBy} extraDescription={extraDescription}/>
+           {getRandomPosterType(title, description, directorCredit, actors, extraDescription, directedBy, producedBy)}
+           {/* <SideBarLayout title={title} description={description} directorCredit={directorCredit} actors={actors} directedBy={directedBy} producedBy={producedBy} extraDescription={extraDescription}/>*/}
         </Wrapper>
     );
 }

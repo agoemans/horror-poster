@@ -2,10 +2,10 @@ export interface iPoster {
     title: string;
     description: string;
     directorCredit: string;
+    extraDescription: string[];
     actors: string[];
     directedBy?: string;
     producedBy?: string;
-    extraDescription: string[];
 }
 
 export interface iAttribute {
@@ -49,4 +49,9 @@ export interface iFontStyles {
     description: string[];
     directorCredit: string[];
     actors: string[];
+}
+
+export interface iNameInfo {
+    firstName: string;
+    surName: string;
 }

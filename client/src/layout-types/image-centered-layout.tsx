@@ -19,14 +19,15 @@ const PosterContainer = styled.div`
     flex-direction: column;
 `;
 
-const BottomBar = styled.div`
+const BottomBarContainer = styled.div`
     display: flex;
     flex-direction: row;
     padding: 20px;
     background-color: #49475B;
+    //max-width: 824px;
 `;
 
-const BottomBarContainer = styled.div`
+const BottomBarContent= styled.div`
     font-family: 'Big Shoulders Display', cursive;
     font-size: 40px;
     color: white;
@@ -60,7 +61,6 @@ const DescriptionContainer = styled.div`
 const TitleContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
     align-items: center;
 `;
 
@@ -68,9 +68,9 @@ const Title = styled.div`
     display: flex;
     font-family: 'Audiowide';
     font-size: 140px;
-    color: #BC6C25;
+    color: white;
     -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: #DDA15E;
+    -webkit-text-stroke-color: #423d74;
 `;
 
 const Spacer = styled.div`
@@ -87,17 +87,18 @@ export default function ImageCenteredLayout(props: iPoster) {
             <PosterContainer>
                 <TitleContainer>
                     <Title>{title.toUpperCase()}</Title>
+                    <Spacer/>
                 </TitleContainer>
                 <BgImage style={{ backgroundImage: `url(./assets/${imageName}.png)` }}>
                     <Spacer/>
                     <DescriptionContainer>{description}</DescriptionContainer>
                     <Spacer/>
                 </BgImage>
-                <BottomBar>
+                <BottomBarContainer>
                     {actors.map((actor: string, idx: number) =>
-                        <BottomBarContainer key={idx}>{actor} </BottomBarContainer>
+                        <BottomBarContent key={idx}>{actor} </BottomBarContent>
                     )}
-                </BottomBar>
+                </BottomBarContainer>
             </PosterContainer>
             <PageFooter author={author} authorUrl={authorUrl} siteName={siteName} siteUrl={siteUrl} imageName={imageName}/>
         </Wrapper>
