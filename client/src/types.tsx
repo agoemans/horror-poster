@@ -10,10 +10,10 @@ export interface iPoster {
 
 export interface iAttribute {
     author: string;
-    authorUrl: string;
     siteName: string;
     siteUrl: string;
     imageName: string;
+    type: string;
 }
 
 export interface iActor {

@@ -1,6 +1,6 @@
 import {getRandomNumber} from "./get-random-number";
-import {attrib} from "../data/attributes";
+import {photoAttributes} from "../data/photo-attributes";
 
 export const getBgImageData = () => {
-    return attrib[getRandomNumber(0, attrib.length)]
+    return photoAttributes[getRandomNumber(0, photoAttributes.length)]
 }

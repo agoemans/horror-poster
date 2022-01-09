@@ -104,7 +104,7 @@ const Spacer = styled.div`
 export default function MinimalistLeftAligned(props: iPoster) {
     const {title, description, directorCredit, actors, directedBy, producedBy, extraDescription} = props;
     const imageName = getBgImageData().imageName;
-    const {author, authorUrl, siteName, siteUrl} = getImageAttribute(imageName);
+    const {author, type, siteName, siteUrl} = getImageAttribute(imageName);
     const secondDescription = extraDescription[getRandomNumber(0, extraDescription.length)]
     const filmBy: string  = 'A FILM BY';
     return (
@@ -129,7 +129,7 @@ export default function MinimalistLeftAligned(props: iPoster) {
                     </ContentContainer>
                 </BgImage>
             </PosterContainer>
-            <PageFooter author={author} authorUrl={authorUrl} siteName={siteName} siteUrl={siteUrl} imageName={imageName}/>
+            <PageFooter author={author} type={type} siteName={siteName} siteUrl={siteUrl} imageName={imageName}/>
         </Wrapper>
     );
 }

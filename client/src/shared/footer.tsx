@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import {iAttribute} from "../types";
 
 const Footer = styled.footer`
-    width: 100%;       
     justify-content: center;        
     margin-top: 0.3em;
     display: flex;
@@ -26,13 +25,15 @@ const Link = styled.a`
 `;
 
 export default function PageFooter(props: iAttribute) {
-    const {imageName, author, authorUrl, siteName, siteUrl} = props;
+    const {imageName, author, siteName, siteUrl, type} = props;
+
+    const attribUrl: string = `${siteUrl}/${type}/${imageName}`;
 
     return (
         <Footer>
             <Para>
-                {imageName} photo created by
-                <Link href={authorUrl} title={author}> {author} </Link>
+
+                <Link href={attribUrl} title={author}> {imageName} {type} created by {author} </Link>
                 -
                 <Link href={siteUrl} title={siteName}> {siteName} </Link>
             </Para>

@@ -4,7 +4,7 @@ import {iAttribute, iFontStyle, iPoster} from "../types";
 import PageFooter from "../shared/footer";
 import MovieTitle from "../shared/title";
 import Description from "../shared/description";
-import {attrib} from "../data/attributes";
+import {photoAttributes} from "../data/photo-attributes";
 import {getImageAttribute} from "../helpers/get-image-attribute";
 import Actors from "../shared/actors";
 import {getBgImageData} from "../helpers/get-bg-image";
@@ -38,7 +38,7 @@ const BgImage = styled.div`
 export default function ImageHeavy(props: iPoster) {
     const {title, description, directorCredit, actors} = props;
     const imageName = getBgImageData().imageName;
-    const {author, authorUrl, siteName, siteUrl} = getImageAttribute(imageName);
+    const {author, type, siteName, siteUrl} = getImageAttribute(imageName);
     const fontStyles: any = getFontStyles();
     return (
         <Wrapper>
@@ -49,7 +49,7 @@ export default function ImageHeavy(props: iPoster) {
                 </BgImage>
             </Outline>
             <Actors actors={actors}/>
-            <PageFooter author={author} authorUrl={authorUrl} siteName={siteName} siteUrl={siteUrl} imageName={imageName}/>
+            <PageFooter author={author} type={type} siteName={siteName} siteUrl={siteUrl} imageName={imageName}/>
         </Wrapper>
     );
 }

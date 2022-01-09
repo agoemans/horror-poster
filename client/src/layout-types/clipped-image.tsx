@@ -107,7 +107,7 @@ const Spacer = styled.div`
 export default function ClippedImage(props: iPoster) {
     const {title, description, directorCredit, actors, directedBy, producedBy} = props;
     const imageName = getBgImageData().imageName;
-    const {author, authorUrl, siteName, siteUrl} = getImageAttribute(imageName);
+    const {author, type, siteName, siteUrl} = getImageAttribute(imageName);
     return (
         <Wrapper>
             <PosterContainer>
@@ -134,7 +134,7 @@ export default function ClippedImage(props: iPoster) {
                     }
                 </BottomBarContainer>
             </PosterContainer>
-            <PageFooter author={author} authorUrl={authorUrl} siteName={siteName} siteUrl={siteUrl} imageName={imageName}/>
+            <PageFooter author={author} type={type} siteName={siteName} siteUrl={siteUrl} imageName={imageName}/>
         </Wrapper>
     );
 }

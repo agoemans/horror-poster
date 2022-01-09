@@ -4,7 +4,7 @@ import {iAttribute, iFontStyle, iNameInfo, iPoster} from "../types";
 import PageFooter from "../shared/footer";
 import MovieTitle from "../shared/title";
 import Description from "../shared/description";
-import {attrib} from "../data/attributes";
+import {photoAttributes} from "../data/photo-attributes";
 import {getImageAttribute} from "../helpers/get-image-attribute";
 import Actors from "../shared/actors";
 import {getBgImageData} from "../helpers/get-bg-image";
@@ -131,7 +131,7 @@ const Spacer = styled.div`
 export default function SideBarLayout(props: iPoster) {
     const {title, description, directorCredit, actors} = props;
     const imageName = getBgImageData().imageName;
-    const {author, authorUrl, siteName, siteUrl} = getImageAttribute(imageName);
+    const {author, type, siteName, siteUrl} = getImageAttribute(imageName);
     let directorName: string[] = directorCredit.split(' ');
     const directorFirstName: string = directorName.shift().toUpperCase();
     const directorSecondName: string = directorName.join(' ').toUpperCase();
@@ -168,7 +168,7 @@ export default function SideBarLayout(props: iPoster) {
                     )}
                 </SideBarContainer>
             </PosterContainer>
-            <PageFooter author={author} authorUrl={authorUrl} siteName={siteName} siteUrl={siteUrl} imageName={imageName}/>
+            <PageFooter author={author} type={type} siteName={siteName} siteUrl={siteUrl} imageName={imageName}/>
         </Wrapper>
     );
 }

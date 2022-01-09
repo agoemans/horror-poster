@@ -1,5 +1,5 @@
-import {attrib} from "../data/attributes";
+import {photoAttributes} from "../data/photo-attributes";
 
 export const getImageAttribute = (imageName: string) => {
-    return attrib.find(item => item.imageName === imageName)
+    return photoAttributes.find(item => item.imageName === imageName)
 }

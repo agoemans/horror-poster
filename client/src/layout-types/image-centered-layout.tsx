@@ -80,7 +80,7 @@ const Spacer = styled.div`
 export default function ImageCenteredLayout(props: iPoster) {
     const {title, description, directorCredit, actors} = props;
     const imageName = getBgImageData().imageName;
-    const {author, authorUrl, siteName, siteUrl} = getImageAttribute(imageName);
+    const {author, type, siteName, siteUrl} = getImageAttribute(imageName);
     let directorName: string[] = directorCredit.split(' ');
     return (
         <Wrapper>
@@ -100,7 +100,7 @@ export default function ImageCenteredLayout(props: iPoster) {
                     )}
                 </BottomBarContainer>
             </PosterContainer>
-            <PageFooter author={author} authorUrl={authorUrl} siteName={siteName} siteUrl={siteUrl} imageName={imageName}/>
+            <PageFooter author={author} type={type} siteName={siteName} siteUrl={siteUrl} imageName={imageName}/>
         </Wrapper>
     );
 }
