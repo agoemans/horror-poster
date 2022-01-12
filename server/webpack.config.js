@@ -11,10 +11,14 @@ module.exports = {
         libraryTarget: 'commonjs',
         clean: true
     },
+    stats: {
+        errorDetails: true
+    },
     optimization: {
         mangleExports: false,
         minimize: false
     },
+
     module: {
         rules: [
             {
@@ -39,10 +43,5 @@ module.exports = {
     },
     resolve: {
     extensions: [".js", ".json", ".ts"],
-  },
-    devServer: {
-        host: 'localhost',
-        port: 3000,
-        historyApiFallback: true
-    }
+  }
 };
