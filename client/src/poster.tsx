@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
-import ImageHeavy from "./layout-types/image-heavy";
 import {getMovie} from "./helpers/get-movie";
 import SideBarLayout from "./layout-types/side-bar-layout";
 import ImageCenteredLayout from "./layout-types/image-centered-layout";

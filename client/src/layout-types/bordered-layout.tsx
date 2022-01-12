@@ -65,7 +65,7 @@ const BorderTopLeft = styled(BorderContainer)`
 
 const SecondDescriptionContent = styled.div`
     display: flex;
-    font-family: 'Big Shoulders Display';
+    font-family: 'Big Shoulders Display', cursive;
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -100,35 +100,24 @@ const FeaturedActorsContent = styled.div`
     padding: 5px;
 `;
 
-const ActorFirstNameContent = styled.div`
+const ActorBaseContent = styled.div`
     display: flex;
-    //font-family: 'Libre Baskerville', serif;
     font-family: 'Merriweather', serif;
-    font-size: 15px;
     color: white;
+`;
+
+const ActorFirstNameContent = styled(ActorBaseContent)`    
+    font-size: 15px;
     transform: scale(1, 1.1);  
     font-weight: 300;
     letter-spacing: 1px;
     font-variant: all-petite-caps;
 `;
 
-const ScaledNameBase = styled.div`
-    display: flex;
-    font-family: 'Big Shoulders Display',cursive;
-    font-size: 20px;
-    font-weight: 600;
-    transform: scale(1, 1.2);
-    letter-spacing: 1px;
-`;
-
-const ActorSecondNameContent = styled.div`
-    display: flex;
-    //font-family: 'Libre Baskerville', serif;
-    font-family: 'Merriweather', serif;
+const ActorSecondNameContent = styled(ActorBaseContent)`    
     font-size: 20px;
     font-weight: 700;
     transform: scale(1, 1.2);
-    color: white;    
 `;
 
 const DirectorContainer = styled.div`
@@ -136,29 +125,23 @@ const DirectorContainer = styled.div`
     flex-direction: row;
 `;
 
-const DirectorContent = styled.div`
+const BaseExtraCreditContent = styled.div`
     display: flex;
     font-family: 'Libre Baskerville', serif;
+    color: ${fontColor};
+    transform: scale(1, 1.2);
+    text-shadow: 1px 1px #523000;
+`;
+
+const DirectorContent = styled(BaseExtraCreditContent)`
     font-size: 20px;
     font-weight: 700;
-    transform: scale(1, 1.2);
-    color: ${fontColor};
-    text-shadow: 1px 1px #523000;
     margin:0 10px;
 `;
 
-const ExtraCreditContent = styled.div`
-    display: flex;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 14px;
-    //font-weight: 700;
-    transform: scale(1, 1.2);
-    color: ${fontColor};
-    text-shadow: 1px 1px #523000;
-    //margin:0 10px;
-    color: ${fontColor};
+const ExtraCreditContent = styled(BaseExtraCreditContent)`    
+    font-size: 14px;    
     margin-right: 10px;
-    text-shadow: 1px 1px #523000;
 `;
 
 const TitleContainer = styled.div`
@@ -169,7 +152,6 @@ const TitleContainer = styled.div`
 
 const Title = styled.div`
     display: flex;
-    //font-family: 'Anton', sans-serif;
     font-family: 'Libre Baskerville', serif;
     font-size: 90px;
     color: ${fontColor};
@@ -196,54 +178,27 @@ const CastContainer = styled.div`
     line-height: 16px;
 `;
 
-const CastCreditLabel = styled.div`
-    display: flex;
-    font-family: 'Libre Baskerville', serif;
+const CastCreditLabel = styled(BaseExtraCreditContent)`    
     font-size: 14px;
-    //font-weight: 700;
     font-variant: all-petite-caps;
-    transform: scale(1, 1.2);
-    color: ${fontColor};
-    text-shadow: 1px 1px #523000;
-    //margin:0 10px;
-    color: ${fontColor};
     margin-right: 10px;
-    text-shadow: 1px 1px #523000;
 `;
 
-const NonCastCreditLabel = styled.div`
-    display: flex;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 14px;
-    //font-weight: 700;
-    transform: scale(1, 1.2);
-    color: ${fontColor};
-    text-shadow: 1px 1px #523000;
-    //margin:0 10px;
-    color: ${fontColor};
+const NonCastCreditLabel = styled(BaseExtraCreditContent)`  
+    font-size: 14px;    
     margin-right: 10px;
-    text-shadow: 1px 1px #523000;
     max-width: 48px;
     line-height: 12px;
     font-variant: all-petite-caps;
 `;
 
-const CastContent = styled.div`
-    display: flex;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 14px;
-    //font-weight: 700;
-    transform: scale(1, 1.2);
-    color: ${fontColor};
-    text-shadow: 1px 1px #523000;
-    //margin:0 10px;
-    color: ${fontColor};
+const CastContent = styled(BaseExtraCreditContent)`  
+    font-size: 14px;    
     margin-right: 10px;
-    text-shadow: 1px 1px #523000;
 `;
 
 const BorderBottomRight = styled(BorderContainer)`
-  transform: rotate(90deg);
+   transform: rotate(90deg);
 `;
 const FooterContainer = styled.div`
     display: flex;
@@ -255,7 +210,7 @@ const Spacer = styled.div`
 `;
 
 export default function BorderedLayout(props: iPoster) {
-    const {title, description, directorCredit, actors, directedBy, producedBy, extraDescription} = props;
+    const {title, actors, directedBy, extraDescription} = props;
     const imageName = getBgImageData().imageName;
     const {author, type, siteName, siteUrl} = getImageAttribute(imageName);
     const secondDescription = extraDescription[getRandomNumber(0, extraDescription.length)]

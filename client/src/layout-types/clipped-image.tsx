@@ -4,7 +4,6 @@ import {iPoster} from "../types";
 import PageFooter from "../shared/footer";
 import {getImageAttribute} from "../helpers/get-image-attribute";
 import {getBgImageData} from "../helpers/get-bg-image";
-import {getFontStyles} from "../helpers/get-font-style";
 
 const Wrapper = styled.div`
     display: flex;
@@ -95,7 +94,7 @@ const TitleContainer = styled.div`
 
 const Title = styled.div`
     display: flex;
-    font-family: 'Audiowide';
+    font-family: 'Audiowide', cursive;
     font-size: 90px;
     color: #9b2226;
 `;

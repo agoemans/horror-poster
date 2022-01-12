@@ -5,7 +5,6 @@ import PageFooter from "../shared/footer";
 import {getImageAttribute} from "../helpers/get-image-attribute";
 import {getBgImageData} from "../helpers/get-bg-image";
 import {getRandomNumber} from "../helpers/get-random-number";
-import {movies} from "../data/movies";
 
 const Wrapper = styled.div`
     display: flex;
@@ -18,6 +17,67 @@ const Wrapper = styled.div`
 const PosterContainer = styled.div`
     display: flex;
     flex-direction: column;
+`;
+
+const BgImage = styled.div`
+    background-size: cover;
+    background-image: none;
+    background-repeat: no-repeat;
+    width: auto;
+    min-width: 850px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 10px 0;
+`;
+
+const DescriptionContainer = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    min-height: 200px;
+    align-items: center;
+`;
+
+const DescriptionContent= styled.div`
+    display: flex;
+    font-family: 'Special Elite', cursive;
+    font-size: 16px;
+    color: white;
+    max-width: 200px;
+    line-height: 32px;
+`;
+
+const TitleContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 470px;
+`;
+
+const DirectorContainer = styled.div`
+    display: flex;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 30px;
+    color: #ff9e00;    
+`;
+
+const Title = styled.div`
+    display: flex;
+    font-family: 'Audiowide', cursive;
+    font-size: 90px;
+    color: #ff9e00;
+    border-top: 1px solid #ff9e00;
+`;
+
+const SecondDescriptionContent = styled.div`
+    display: flex;
+    font-family: 'Titan One', cursive;
+    font-size: 24px;
+    justify-content: center;
+    padding: 10px;
+    color: #ff9e00;
 `;
 
 const BottomBarContainer = styled.div`
@@ -56,67 +116,6 @@ const BottomBarValue = styled.div`
     font-size: 30px;
     color: white;
     padding-left: 12px;
-`;
-
-const BgImage = styled.div`
-    background-size: cover;
-    background-image: none;
-    background-repeat: no-repeat;
-    width: auto;
-    min-width: 850px;
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    margin: 10px 0;
-`;
-
-const DirectorContainer = styled.div`
-    display: flex;
-    font-family: 'Big Shoulders Display', cursive;
-    font-size: 30px;
-    color: #ff9e00;    
-`;
-
-const DescriptionContainer = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-    min-height: 200px;
-    align-items: center;
-`;
-
-const DescriptionContent= styled.div`
-    display: flex;
-    font-family: 'Special Elite', cursive;
-    font-size: 16px;
-    color: white;
-    max-width: 200px;
-    line-height: 32px;
-`;
-
-const SecondDescriptionContent = styled.div`
-    display: flex;
-    font-family: 'Titan One', cursive;
-    font-size: 24px;
-    justify-content: center;
-    padding: 10px;
-    color: #ff9e00;
-`;
-
-const TitleContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 470px;
-`;
-
-const Title = styled.div`
-    display: flex;
-    font-family: 'Audiowide';
-    font-size: 90px;
-    color: #ff9e00;
-    border-top: 1px solid #ff9e00;
 `;
 
 const Spacer = styled.div`

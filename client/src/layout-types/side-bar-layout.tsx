@@ -1,14 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import {iAttribute, iFontStyle, iNameInfo, iPoster} from "../types";
+import {iNameInfo, iPoster} from "../types";
 import PageFooter from "../shared/footer";
-import MovieTitle from "../shared/title";
-import Description from "../shared/description";
-import {photoAttributes} from "../data/photo-attributes";
 import {getImageAttribute} from "../helpers/get-image-attribute";
-import Actors from "../shared/actors";
 import {getBgImageData} from "../helpers/get-bg-image";
-import {getFontStyles} from "../helpers/get-font-style";
 
 const Wrapper = styled.div`
     display: flex;
