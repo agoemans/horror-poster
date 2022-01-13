@@ -58,14 +58,12 @@ const BgImage = styled.div`
     background-size: cover;
     background-image: none;
     background-repeat: no-repeat;
-    //width: auto;
     height: 350px;
     width: 430px;
     display: flex;
     flex-direction: column;
     align-self: center;
     clip-path: circle(170px at center);
-    //clip-path: inset(10px 20px 30px 40px);
     margin: 10px 0;
 `;
 
@@ -97,6 +95,7 @@ const Title = styled.div`
     font-family: 'Audiowide', cursive;
     font-size: 90px;
     color: #9b2226;
+    text-align: center;
 `;
 
 const Spacer = styled.div`
