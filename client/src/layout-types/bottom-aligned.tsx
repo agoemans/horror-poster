@@ -123,10 +123,9 @@ const Spacer = styled.div`
 `;
 
 export default function BottomAligned(props: iPoster) {
-    const {title, description, directorCredit, actors, directedBy, producedBy, extraDescription} = props;
+    const {title, description, directorCredit, actors, directedBy, producedBy, secondDescription} = props;
     const imageName = getBgImageData().imageName;
     const {author, type, siteName, siteUrl} = getImageAttribute(imageName);
-    const secondDescription = extraDescription[getRandomNumber(0, extraDescription.length)]
     return (
         <Wrapper>
             <PosterContainer>

@@ -5,7 +5,6 @@ import PageFooter from "../shared/footer";
 import {getImageAttribute} from "../helpers/get-image-attribute";
 import {getBgImageData} from "../helpers/get-bg-image";
 import {getRandomNumber} from "../helpers/get-random-number";
-import {movies} from "../data/movies";
 
 const fontColor: string = '#ff9e00';
 
@@ -102,10 +101,9 @@ const Spacer = styled.div`
 `;
 
 export default function MinimalistLeftAligned(props: iPoster) {
-    const {title, description, directorCredit, actors, directedBy, producedBy, extraDescription} = props;
+    const {title, actors, directedBy, secondDescription} = props;
     const imageName = getBgImageData().imageName;
     const {author, type, siteName, siteUrl} = getImageAttribute(imageName);
-    const secondDescription = extraDescription[getRandomNumber(0, extraDescription.length)]
     const filmBy: string  = 'A FILM BY';
     return (
         <Wrapper>

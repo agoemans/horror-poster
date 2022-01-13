@@ -210,10 +210,9 @@ const Spacer = styled.div`
 `;
 
 export default function BorderedLayout(props: iPoster) {
-    const {title, actors, directedBy, extraDescription} = props;
+    const {title, actors, directedBy, secondDescription} = props;
     const imageName = getBgImageData().imageName;
     const {author, type, siteName, siteUrl} = getImageAttribute(imageName);
-    const secondDescription = extraDescription[getRandomNumber(0, extraDescription.length)]
     const featuredActors = actors.slice(0, 2);
     const cast: string = 'FEATURING';
     const directorLabel: string = 'DIRECTED BY';

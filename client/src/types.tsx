@@ -2,7 +2,7 @@ export interface iPoster {
     title: string;
     description: string;
     directorCredit: string;
-    extraDescription: string[];
+    secondDescription: string;
     actors: string[];
     directedBy?: string;
     producedBy?: string;

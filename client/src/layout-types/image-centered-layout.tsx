@@ -80,7 +80,6 @@ export default function ImageCenteredLayout(props: iPoster) {
     const {title, description, directorCredit, actors} = props;
     const imageName = getBgImageData().imageName;
     const {author, type, siteName, siteUrl} = getImageAttribute(imageName);
-    let directorName: string[] = directorCredit.split(' ');
     return (
         <Wrapper>
             <PosterContainer>
