@@ -13,5 +13,10 @@ export const routes: Route[] = [
         method: 'get',
         path: '/api/movies',
         handler: controllers.getMovies
+    },
+    {
+        method: 'get',
+        path: '/api/movie',
+        handler: controllers.getMovie
     }
 ];

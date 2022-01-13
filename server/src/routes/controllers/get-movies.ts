@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import { repository } from '../../../persistence';
+import { repository } from '../../persistence';
 
 export const getMovies = async (req: Request, res: Response) => {
     try {

@@ -1,1 +1,2 @@
-export * from './movies/get-movies';
+export * from './get-movies';
+export * from './get-movie';

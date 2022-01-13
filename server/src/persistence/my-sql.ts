@@ -43,4 +43,26 @@ export class MySqlClient implements Repository {
         }
     };
 
+    getMovie = async () => {
+        // todo implement
+        const query = null;
+
+        try {
+            const movieResult: any = await this.query(query);
+
+            return {
+                title: '',
+                description: '',
+                directorCredit: '',
+                extraDescription: [],
+                actors: [],
+                directedBy: '',
+                producedBy: ''
+            };
+
+        } catch(err: any) {
+            throw new Error('Could not get all movie Items: ' + err );
+        }
+    };
+
 }
