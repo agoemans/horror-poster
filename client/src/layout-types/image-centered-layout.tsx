@@ -40,7 +40,7 @@ const BgImage = styled.div`
     background-repeat: no-repeat;
     width: auto;
     min-width: 850px;
-    height: 569px;
+    height: 650px;
     display: flex;
     flex-direction: column;
 `;
@@ -65,8 +65,8 @@ const TitleContainer = styled.div`
 
 const Title = styled.div`
     display: flex;
-    font-family: 'Audiowide';
-    font-size: 140px;
+    font-family: 'Audiowide', cursive;
+    font-size: 100px;
     color: white;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #423d74;

@@ -62,7 +62,6 @@ const DescriptionContainer = styled.div`
 const TitleContainer = styled.div`
     display: flex;
     flex-direction: column;
-    //height: 55%;
     justify-content: end;
     align-items: flex-start;
     margin-left: 40px;
@@ -74,9 +73,6 @@ const Title = styled.div`
     letter-spacing: -5px;
     font-size: 140px;
     color: #B88400;
-    //font-variant: all-small-caps;
-    //-webkit-text-stroke-width: 1px;
-    //-webkit-text-stroke-color: #14080E;
     text-shadow: 2px 2px #2c2929;
 `;
 
