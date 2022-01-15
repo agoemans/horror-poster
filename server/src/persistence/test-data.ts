@@ -30,18 +30,10 @@ export let movieItems: MovieModel[] = [
     },
     {
         description: 'The trick was to stay alive', title: 'Halloween',
-        actors: ['Jamie Lee Curtis', 'Donald Pleasence', 'Nick Castle', 'Tony Moran', 'Will Sandin'],
+        actors: ['Jamie Lee Curtis', 'Donald Pleasence', 'Nick Castle', 'Tony Moran', 'Will Sandin', 'Nancy Kyes'],
         directorCredit: 'John Carpenter\'s',
         directedBy: 'John Carpenter',
         producedBy: 'Debra Hill',
         extraDescription: ['Everyone is entitled to one good scare', 'Trick or treat... or die']
-    },
-    {
-        description: 'It started in May, in a small town. And every month after that, whenever the moon was full...it came back', title: 'Silver Bullet',
-        actors: ['Gary Busey', 'Everett McGill', 'Corey Haim', 'Megan Follows', 'Terry O\'Quinn'],
-        directorCredit: 'Stephen King\'s',
-        directedBy: 'Dan Attias',
-        producedBy: 'Dino De Laurentiis & Martha De Laurentiis',
-        extraDescription: ['When darkness falls, terror rises.', 'Part human. Part wolf. Total terror.']
     }
 ]
